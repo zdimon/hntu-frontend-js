@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Заголовок</title>
+    </head>
+    <body>
+        <h1> Hellow World!! </h1>
+        <div id="mydiv" style="border: 2px solid red; width: 200px; height: 200px;">
+            My block
+        </div>
+
+        <p class="mp">1</p>
+        <p class="mp">2</p>
+        <p class="mp">3</p>
+
+        <script>
+
+            // var myname = prompt('What is your name?');
+            // console.log(myname);
+            // var al = alert('Hello!!')
+            //var result = confirm('Are your sure?');
+            // console.log(al);
+            var mydiv = document.getElementById('mydiv');
+            var content = mydiv.innerHTML;
+            mydiv.innerHTML = '1234567';
+            console.log(content);
+            var myp = document.getElementsByClassName('mp');
+            console.log(myp);
+            
+            Array.from(myp).forEach(function(el, index) {
+                console.log(el);
+                el.innerHTML = 'Hello ' + index;
+            });
+
+            // if (result == true) {
+            //     console.log('yesssssss');
+            // } else {
+            //     console.log('nooooooo');
+            // }
+        </script>
+    </body>
+</html>
